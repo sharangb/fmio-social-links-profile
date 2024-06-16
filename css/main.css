@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --color-black: #141414;
+  --color-dark-grey: #1f1f1f;
+  --color-grey: #333333;
+  --color-neon-green: #c4f82a;
+  --color-white: #ffffff;
+}
+
+:root {
+  --len-xl: 2.5rem;
+  --len-l: 1.5rem;
+  --len-m: 1rem;
+  --len-s: 0.75rem;
+  --len-xs: 0.25rem;
+  --len-borrad-l: 0.75rem;
+  --len-borrad-m: 0.5rem;
+  --size-heading: 1.5rem;
+  --size-body: 0.875rem;
+}
+
+/* css reset begins */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100vw;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* css reset ends */
+
+/* selector css */
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-flow: column nowrap;
+  font: 400 var(--size-body) / 1.5 'Inter', sans-serif;
+  place-content: center auto;
+  place-items: auto center;
+}
+
+h1 {
+  font: 600 var(--size-heading) / 1.5 'Inter', sans-serif;
+}
+
+/* class css */
+
+.attribution {
+  display: none;
+}
+
+.card {
+  background-color: var(--color-dark-grey);
+  border-radius: var(--len-borrad-l);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--len-l);
+  margin: auto;
+  min-width: 384px;
+  padding: var(--len-xl);
+  place-content: space-between;
+  place-items: center;
+}
+
+.card img {
+  border-radius: 50%;
+  height: 88px;
+  width: 88px;
+}
+
+.card .name-info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--len-xs);
+  place-items: center;
+  place-content: space-between;
+  width: 100%;
+}
+
+.name-info p {
+  color: var(--color-neon-green);
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--len-m);
+  width: 100%;
+}
+
+.links button {
+  background-color: var(--color-grey);
+  border: none;
+  border-radius: var(--len-borrad-m);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: 700;
+  padding: var(--len-s);
+}
+
+.links button:hover {
+  background-color: var(--color-neon-green);
+  color: var(--color-grey);
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: 320px;
+    padding: var(--len-l)
+  }
+}
